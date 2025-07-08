@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Create Asiento
+{% endblock %}
+
+{% block content %}
+    <h2>Crear nuevo asiento</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+        <a href="{% url 'asiento_list' %}">Volver</a>
+    </form>
+{% endblock %}

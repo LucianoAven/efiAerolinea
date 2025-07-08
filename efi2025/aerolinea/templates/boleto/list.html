@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %} Boleto List {% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+    <h1>Boletos</h1>
+
+    <table
+        class="table table-striped table-hover table-bordered align-middle shadow-sm"
+    >
+        <thead>
+            <tr>
+                <th>Reserva</th>
+                <th>Codigo Barra</th>
+                <th>Fecha Emision</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for boleto in boletos %}
+                <tr class="">
+                    <td scope="row">{{ boleto.reserva_id }}</td>
+                    <td>{{ boleto.codigo_barra }}</td>
+                    <td>{{ boleto.fecha_emision }}</td>
+                    <td>{{ boleto.estado }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% if user.is_staff %}
+        <div class="row">
+            <div class="col">                
+                <a href="{% url 'boleto_create' %}" class="btn btn-button"><b>Crear boleto</b></a>            
+            </div>
+        </div>
+    {% endif %}
+
+{% else %}
+    <h5>No iniciaste sesion para acceder al sitio</h5>
+{% endif %}
+
+{% endblock %}

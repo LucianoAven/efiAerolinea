@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %} Reserva List {% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+    <h1>Reservas</h1>
+
+    <table
+        class="table table-striped table-hover table-bordered align-middle shadow-sm"
+    >
+        <thead>
+            <tr>
+                <th>Vuelo</th>
+                <th>Pasajero</th>
+                <th>Asiento</th>
+                <th>Estado</th>
+                <th>Fecha Reserva</th>
+                <th>Precio</th>
+                <th>Codigo de Reserva</th>
+                {% if user.is_staff %}
+                    <th>Acciones</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for reserva in reservas %}
+                <tr class="">
+                    <td scope="row">{{ reserva.vuelo_id }}</td>
+                    <td>{{ reserva.pasajero_id }}</td>
+                    <td>{{ reserva.asiento_id }}</td>
+                    <td>{{ reserva.estado }}</td>
+                    <td>{{ reserva.fecha_reserva }}</td>
+                    <td>{{ reserva.precio }}</td>
+                    <td>{{ reserva.codigo_reserva }}</td>
+                    {% if user.is_staff %}
+                        <td>
+                            <a href="{% url 'reserva_delete' reserva.id %}" class="btn btn-button-borrar btn-sm" aria-hidden="true"> <b>Borrar</b> </a>
+                        </td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="row">
+        <div class="col">
+            <a href="{% url 'reserva_create' %}" class="btn btn-button"><b>Crear reserva</b></a>
+        </div>
+    </div>
+
+{% else %}
+    <h5>No iniciaste sesion para acceder al sitio</h5>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Detail {% endblock %}
+
+{% block content %}
+
+    <h1 class="fs-1"><b>Detalles del Vuelo</b></h1>
+
+    <ul class="fs-3">
+        <li> <b>Modelo de Avion:</b> {{ vuelo.avion_id }} </li>
+        <li> <b>Origen:</b> {{ vuelo.origen }} </li>
+        <li> <b>Destino:</b> {{ vuelo.destino }} </li>
+        <li> <b>Fecha de salida:</b> {{ vuelo.fecha_salida }} </li>
+        <li> <b>Fecha de llegada:</b> {{ vuelo.fecha_llegada }} </li>
+        <li> <b>Duracion:</b> {{ vuelo.duracion }} </li>
+        <li> <b>Estado:</b> {{ vuelo.estado }} </li>
+        <li> <b>Precio Base:</b> {{ vuelo.precio_base }} </li>
+    </ul>        
+
+{% endblock %}

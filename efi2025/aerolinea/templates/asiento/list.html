@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %} Avion List {% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+    <h1>Asientos</h1>
+
+    <table
+        class="table table-striped table-hover table-bordered align-middle shadow-sm"
+    >
+        <thead>
+            <tr>
+                <th>Avion</th>
+                <th>Numero</th>
+                <th>Fila</th>
+                <th>Columna</th>
+                <th>Tipo</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for asiento in asientos %}
+                <tr class="">
+                    <td scope="row">{{ asiento.avion_id }}</td>
+                    <td>{{ asiento.numero }}</td>
+                    <td>{{ asiento.fila }}</td>
+                    <td>{{ asiento.columna }}</td>
+                    <td>{{ asiento.tipo }}</td>
+                    <td>{{ asiento.estado }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="row">
+        <div class="col">
+            <a href="{% url 'asiento_create' %}" class="btn btn-button"><b>Crear asiento</b></a>
+        </div>
+    </div>
+
+{% else %}
+    <h5>No iniciaste sesion para acceder al sitio</h5>
+{% endif %}
+
+{% endblock %}

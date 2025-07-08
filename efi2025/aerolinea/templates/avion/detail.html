@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} Detail {% endblock %}
+
+{% block content %}
+
+    <h2 class="fs-1"> <b>Detalles del avion</b> </h2>
+
+    <ul class="fs-3">
+        <li> <b>Modelo de Avion:</b> {{ avion.modelo }} </li>
+        <li> <b>Capacidad:</b> {{ avion.capacidad }} </li>
+        <li> <b>Filas:</b> {{ avion.filas }} </li>
+        <li> <b>Columnas:</b> {{ avion.columnas }} </li>
+    </ul>
+
+{% endblock %}

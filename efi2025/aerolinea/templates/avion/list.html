@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %} Avion List {% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+    <h1>Aviones</h1>
+
+    <table
+        class="table table-striped table-hover table-bordered align-middle shadow-sm"
+    >
+        <thead>
+            <tr>
+                <th>Modelo</th>
+                <th>Capacidad</th>
+                <th>Filas</th>
+                <th>Columnas</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for avion in aviones %}
+                <tr class="">
+                    <td scope="row">{{ avion.modelo }}</td>
+                    <td>{{ avion.capacidad }}</td>
+                    <td>{{ avion.filas }}</td>
+                    <td>{{ avion.columnas }}</td>
+                    <td>
+                        <a href="{% url 'avion_detail' avion.id %}" class="btn btn-button btn-sm" aria-hidden="true"> <b>Ver</b> </a>
+                        {% if user.is_staff %}
+                            <a href="{% url 'avion_delete' avion.id %}" class="btn btn-button-borrar btn-sm" aria-hidden="true"> <b>Borrar</b> </a>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="row">
+        <div class="col">
+            <a href="{% url 'avion_create' %}" class="btn btn-button"><b>Crear avion</b></a>
+        </div>
+    </div>
+
+{% else %}
+    <h5>No iniciaste sesion para acceder al sitio</h5>
+{% endif %}
+
+{% endblock %}

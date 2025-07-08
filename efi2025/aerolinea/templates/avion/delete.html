@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+Eliminar Avion
+{% endblock %}
+
+{% block content %}
+    <h2>Estas seguro que deseas eliminar {{object.modelo}} ?</h2>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">
+            Seguro, borrar
+        </button>
+        <a href="{% url 'avion_list' %}">Volver</a>
+    </form>
+{% endblock %}

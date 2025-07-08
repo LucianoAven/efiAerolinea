@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Historial de {{ pasajero.nombre }}{% endblock %}
+
+{% block content %}
+<h2>Historial de reservas de {{ pasajero.nombre }}</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Fecha cambio</th>
+            <th>Vuelo</th>
+            <th>Estado reserva</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for hist in historial_reservas %}
+        <tr>
+            <td>{{ hist.history_date }}</td>
+            <td>{{ hist.vuelo_id }}</td>
+            <td>{{ hist.estado }}</td>
+            <td>
+                {% if hist.history_type == '~' %}
+                    Modificado
+                {% elif hist.history_type == '+' %}
+                    Creado
+                {% elif hist.history_type == '-' %}
+                    Eliminado
+                {% endif %}
+            </td>
+        </tr>
+    {% empty %}
+        <tr><td colspan="4">No hay historial de reservas.</td></tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

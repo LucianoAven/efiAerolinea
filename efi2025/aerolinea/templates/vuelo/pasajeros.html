@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Pasajeros del vuelo a {{ vuelo.destino }}{% endblock %}
+
+{% block content %}
+<h2>Pasajeros del vuelo a {{ vuelo.destino }}</h2>
+
+{% if pasajeros %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Documento</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pasajero in pasajeros %}
+                <tr>
+                    <td>{{ pasajero.nombre }}</td>
+                    <td>{{ pasajero.documento }}</td>
+                    <td>{{ pasajero.email }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No hay pasajeros con reservas para este vuelo.</p>
+{% endif %}
+{% endblock %}
