@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+venv/
+env/
+
+# Archivos de base de datos
+*.sqlite3
+
+# Archivos de configuración sensibles
+.env
+
+# Archivos de configuración del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+*.log
+
+# Archivos generados por el navegador
+*.swp
+*.swo
+
+# Archivos de compilación
+*.mo
+
+# Archivos generados por el front
+node_modules/
+dist/
+build/
+
+# Archivos de medios y estáticos
+media/
+staticfiles/
+
+# Archivos de JetBrains (PyCharm, etc.)
+.idea/
+
+# Archivos de VSCode
+.vscode/

@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-02 23:27-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: efi2025/aerolinea/models.py:27
+msgid "Programado"
+msgstr "Scheduled"
+
+#: efi2025/aerolinea/models.py:28
+msgid "En vuelo"
+msgstr "In flight"
+
+#: efi2025/aerolinea/models.py:29
+msgid "Completado"
+msgstr "Complete"
+
+#: efi2025/aerolinea/models.py:30 efi2025/aerolinea/models.py:150
+msgid "Cancelado"
+msgstr "Canceled"
+
+#: efi2025/aerolinea/models.py:48
+msgid "Pasaporte"
+msgstr "Passport"
+
+#: efi2025/aerolinea/models.py:49
+msgid "Cédula"
+msgstr "ID"
+
+#: efi2025/aerolinea/models.py:67
+msgid "Económico"
+msgstr "Economic"
+
+#: efi2025/aerolinea/models.py:69
+msgid "Ejecutivo"
+msgstr "Executive"
+
+#: efi2025/aerolinea/models.py:75
+msgid "Disponible"
+msgstr "Available"
+
+#: efi2025/aerolinea/models.py:76
+msgid "Reservado"
+msgstr "Reserved"
+
+#: efi2025/aerolinea/models.py:77
+msgid "Ocupado"
+msgstr "Occupied"
+
+#: efi2025/aerolinea/models.py:104
+msgid "Pendiente"
+msgstr "Pending"
+
+#: efi2025/aerolinea/models.py:105
+msgid "Confirmada"
+msgstr "Confirmed"
+
+#: efi2025/aerolinea/models.py:106
+msgid "Cancelada"
+msgstr "Canceled"
+
+#: efi2025/aerolinea/models.py:131 efi2025/home/templates/base.html:39
+msgid "Pasajero"
+msgstr "Passenger"
+
+#: efi2025/aerolinea/models.py:149
+msgid "Emitido"
+msgstr "Issued"
+
+#: efi2025/aerolinea/models.py:151
+msgid "Abordado"
+msgstr "Boarded"
+
+#: efi2025/aerolinea/models.py:152
+msgid "Check-in Realizado"
+msgstr "Check-in Done"
+
+#: efi2025/home/templates/accounts/login.html:3
+#: efi2025/home/templates/accounts/login.html:11
+msgid "Inicio de Sesion"
+msgstr "Login"
+
+#: efi2025/home/templates/accounts/login.html:17
+msgid "Iniciar Sesion"
+msgstr "Log In"
+
+#: efi2025/home/templates/accounts/login.html:20
+msgid "¿Todavia no creaste una cuenta?"
+msgstr "Haven`t created an account yet?"
+
+#: efi2025/home/templates/accounts/login.html:20
+#: efi2025/home/templates/accounts/registro.html:44
+#: efi2025/home/templates/base.html:48 efi2025/home/templates/index.html:22
+msgid "Registrarse"
+msgstr "Register"
+
+#: efi2025/home/templates/accounts/registro.html:3
+msgid "Registro"
+msgstr "Register"
+
+#: efi2025/home/templates/base.html:15
+msgid "Inicio"
+msgstr "Home"
+
+#: efi2025/home/templates/base.html:24
+msgid "Avion"
+msgstr "Plane"
+
+#: efi2025/home/templates/base.html:27
+msgid "Boleto"
+msgstr "Ticket"
+
+#: efi2025/home/templates/base.html:30
+msgid "Vuelo"
+msgstr "Flight"
+
+#: efi2025/home/templates/base.html:33
+msgid "Reserva"
+msgstr "Bookings"
+
+#: efi2025/home/templates/base.html:36
+msgid "Asiento"
+msgstr "Seat"
+
+#: efi2025/home/templates/base.html:43
+msgid "Salir"
+msgstr "Logout"
+
+#: efi2025/home/templates/index.html:12
+msgid "¡Bienvenido!"
+msgstr "Welcome!"
+
+#: efi2025/home/templates/index.html:13
+msgid "Sistema de Gestion de Aerolinea"
+msgstr "Airline Managment System"
+
+#: efi2025/home/templates/index.html:17
+msgid "Iniciar sesion para acceder a todas las funciones"
+msgstr "Log in to access all sessions"
+
+#: efi2025/home/templates/index.html:19
+msgid "Ingresar cuenta"
+msgstr "Log In"
