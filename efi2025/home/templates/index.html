@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load i18n static %}
+
+{% block title %} {% trans "Inicio" %} {% endblock %}
+
+{% block content %}
+    {{ current_year }}
+
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 60vh;">
+        <div class="text-center">
+            <div class="jumbotron">
+                <h1 class="display-2"><b>{% trans "¡Bienvenido!" %}</b></h1>
+                <p class="lead display-5"><b>{% trans 'Sistema de Gestion de Aerolinea' %}</b></p>
+                <hr class="my-4">
+
+                {% if not user.is_authenticated %}
+                    <p class="lead display-7"><b>{% trans 'Iniciar sesion para acceder a todas las funciones' %}</b></p>
+                    <p class="lead">
+                        <a class="btn btn-button btn-lg me-2" href="{% url 'login' %}" role="button">{% trans "Ingresar cuenta" %}</a>
+                        <a class="btn btn-button btn-lg" href="{% url 'registro' %}" role="button">{% trans "Registrarse" %}</a>
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

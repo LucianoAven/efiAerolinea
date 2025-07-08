@@ -1,0 +1,57 @@
+.navbar-brand:hover {
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.bg-soft-green {
+    background-color:rgb(79, 179, 79); /* verde muy suave */
+}
+
+
+.btn-soft-green {
+    background-color:rgb(79, 179, 79); /* verde muy suave */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-soft-green:hover {
+    background-color:rgb(33, 92, 33); /* verde oscuro */
+    color: white;
+}
+
+.btn-soft-red {
+    background-color:rgb(240, 126, 126); /* rojo suave */
+    color:rgb(0, 0, 0);            /* texto rojo oscuro */
+    border: 1px solidrgb(17, 14, 14);
+}
+
+.btn-soft-red:hover {
+    background-color:rgb(233, 23, 23); /* un poco más oscuro al pasar el cursor */
+    color:rgb(0, 0, 0);
+}        
+
+.btn-button {
+    background-color: rgb(161, 149, 149);
+    color:rgb(0, 0, 0); /* texto negro */
+    border: 2px solid rgb(25, 73, 25); /* borde verde */
+}
+
+.btn-button:hover {
+    background-color: rgb(141, 127, 127);
+    color:rgb(0, 0, 0); /* texto negro */
+}
+
+.btn-button-borrar {
+    background-color: rgb(218, 75, 75);
+    color:rgb(0, 0, 0); /* texto negro */
+    border: 2px solid rgb(0, 0, 0); /* borde verde */
+}
+
+.btn-button-borrar:hover {
+    background-color: rgb(211, 14, 14);
+    color:rgb(0, 0, 0); /* texto negro */
+}

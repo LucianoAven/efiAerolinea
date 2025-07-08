@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load i18n static %}
+
+{% block title %} {% trans "Inicio de Sesion" %} {% endblock %}
+
+{% block content %} 
+
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+
+            <h2>{% trans "Inicio de Sesion" %}</h2>
+
+            <form method="post">        
+                {% csrf_token %}
+                {{ form.as_p }}
+                <br>
+                <button class="btn btn-button" type="submit">{% trans "Iniciar Sesion" %}</button>
+        
+            </form>
+            <p class="mt-4">{% trans "¿Todavia no creaste una cuenta?" %} </p>
+            <a class="btn btn-button" href="{% url 'registro' %}">{% trans "Registrarse" %}</a>            
+
+        </div>
+        <div class="col-4"></div>
+    </div>
+
+{% endblock %}
