@@ -95,9 +95,9 @@ Contiene la parte de autenticación de usuarios y vista principal del sitio:
 ```bash
 git clone https://github.com/tuusuario/efiaerolineas.git
 cd efiaerolineas
-python3 -m venv venv
+python3 -m venv .env
 source venv/bin/activate
 pip install -r requirements.txt
-python manage.py migrate
-python manage.py createsuperuser
-python manage.py runserver
+python3 manage.py migrate
+python3 manage.py createsuperuser
+python3 manage.py runserver
